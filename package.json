@@ -1,0 +1,38 @@
+{
+  "name": "sixtysix",
+  "version": "0.0.0",
+  "description": "KDRouter-like router powered by page.js",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usirin/sixtysix"
+  },
+  "directories": {
+    "test": "jest"
+  },
+  "scripts": {
+    "test": "node ./node_modules/jest-cli/bin/jest.js"
+  },
+  "author": "Umut Sirin <umutsirin1@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "jest-cli": "^0.2.0",
+    "kdf-core": "0.0.x"
+  },
+  "jest": {
+    "testDirectoryName": "test",
+    "scriptPreprocessor": "./node_modules/kdf-core/test/coffee-processor.js",
+    "moduleFileExtensions": [
+      "coffee",
+      "js"
+    ],
+    "testFileExtensions": [
+      "coffee",
+      "js"
+    ]
+  },
+  "dependencies": {
+    "page": "^1.5.0"
+  }
+}
