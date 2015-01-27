@@ -33,7 +33,6 @@
     ]
   },
   "dependencies": {
-    "lodash.assign": "^2.4.1",
     "page": "git://github.com/visionmedia/page.js"
   }
 }
