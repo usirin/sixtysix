@@ -189,3 +189,9 @@ module.exports = class Router
     return this
 
 
+  redirect: (route) ->
+
+    pageRouter.redirect route
+
+    return this
+
