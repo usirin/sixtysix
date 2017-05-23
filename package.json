@@ -18,22 +18,22 @@
   "license": "MIT",
   "devDependencies": {
     "coffee-script": "1.8.0",
-    "jest-cli": "^0.2.0",
+    "jest-cli": "^20.0.3",
     "kdf-core": "0.0.x"
   },
   "jest": {
-    "testDirectoryName": "test",
-    "scriptPreprocessor": "./node_modules/kdf-core/test/coffee-processor.js",
-    "moduleFileExtensions": [
-      "coffee",
-      "js"
+    "testMatch": [
+      "**/test/*.(coffee|js)"
     ],
-    "testFileExtensions": [
+    "transform": {
+      "^.+\\.coffee$": "./node_modules/kdf-core/test/coffee-processor.js"
+    },
+    "moduleFileExtensions": [
       "coffee",
       "js"
     ]
   },
   "dependencies": {
-    "page": "git://github.com/visionmedia/page.js"
+    "page": "^1.7.1"
   }
 }
