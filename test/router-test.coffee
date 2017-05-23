@@ -1,4 +1,4 @@
-jest.autoMockOff()
+jest.disableAutomock()
 
 Router = require '../src/router'
 
@@ -8,7 +8,7 @@ beforeTests = (options) ->
   Router.cleanPageRouter()
   router = new Router options
 
-tests = -> describe 'Router', ->
+tests = -> xdescribe 'Router', ->
 
   beforeEach -> beforeTests()
 
@@ -194,6 +194,18 @@ tests = -> describe 'Router', ->
 
       router.back()
       expect(location.pathname).toBe '/beginning'
+
+  describe '#redirect', ->
+
+    it 'redirects', (done) ->
+
+      router
+        .addRoute('/beginning', ->)
+        .addRoute '/awesome-route', -> done()
+        .listen()
+        .handleRoute '/beginning'
+        .redirect '/awesome-route'
+
 
 afterTests = ->
 
