@@ -11,7 +11,8 @@
     "test": "jest"
   },
   "scripts": {
-    "test": "node ./node_modules/jest-cli/bin/jest.js"
+    "test": "node ./node_modules/jest-cli/bin/jest.js",
+    "prepublish": "rm -rf ./lib && coffee --compile --output lib/ src/"
   },
   "author": "Umut Sirin <umutsirin1@gmail.com>",
   "license": "MIT",
