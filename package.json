@@ -17,7 +17,7 @@
   "author": "Umut Sirin <umutsirin1@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "coffee-script": "^1.8.0",
+    "coffee-script": "1.8.0",
     "jest-cli": "^0.2.0",
     "kdf-core": "0.0.x"
   },
